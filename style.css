@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Ubuntu&display=swap');
+
+:root{
+    --radius: 15px;
+    --app-width: 600px;
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    min-height: 100vh;
+    background:url('bg.png') center;
+    background-size: cover;
+}
+
+.app{
+    color: aliceblue;
+    background-color:#ffffff22;
+    width: var(--app-width)
+    border-radius:var(--radius);
+    padding:5rem;
+    box-shadow: 0 15px 40px -20px black;
+
+}
+
+.app h1{
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.todo-input{
+    width: 100%;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    font-size: 20px;
+    background-color: rgb(0, 0, 0);
+    color:rgb(176, 165, 165);
+}
+
+.todo-input::placeholder{
+    color: rgb(47, 143, 111);
+}
+
+.todos,
+.completed-todos,
+.uncompleted-todos{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.todo-item{
+    background-color: rgb(243, 242, 242);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.todo-item span{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.todo-item input[type=checkbox] {
+    width: 20px;
+    height: 20px; 
+    accent-color: rgb(8, 252, 4);
+}
+
+.todo-item a{
+    color:chocolate;
+}
+
+.todo-item a svg{
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+}
+
+.completed-todos .todo-item{
+    background-color:bisque;
+    text-decoration: line-through;
+}
+
+.completed-title{
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
